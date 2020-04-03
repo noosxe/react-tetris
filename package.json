@@ -1,0 +1,13 @@
+{
+  "name": "react-tetris",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@github.com:noosxe/react-tetris.git",
+  "author": "Levon Kirakosyan <noosx.e@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@bazel/bazelisk": "^1.3.0",
+    "@bazel/ibazel": "^0.12.3"
+  }
+}
