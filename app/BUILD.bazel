@@ -1,0 +1,28 @@
+load("@npm_bazel_typescript//:index.bzl", "ts_devserver", "ts_library")
+
+package(default_visibility = ["//visibility:public"])
+
+ts_library(
+    name = "app",
+    srcs = [
+        "app.tsx",
+        "index.tsx",
+    ],
+    deps = [
+        "@npm//@types/react",
+        "@npm//@types/react-dom",
+    ],
+)
+
+ts_devserver(
+    name = "devserver",
+    entry_module = "react_tetris/app/index",
+    port = 8080,
+    serving_path = "/bundle.js",
+    static_files = [":index.html"],
+    deps = [
+        ":app",
+        "@npm//react:react__umd",
+        "@npm//react-dom:react-dom__umd",
+    ],
+)
