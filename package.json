@@ -8,6 +8,7 @@
   "private": true,
   "scripts": {
     "dev": "ibazel run app:devserver",
+    "build": "bazel build app",
     "lint": "eslint 'app/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "devDependencies": {
