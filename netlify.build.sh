@@ -8,4 +8,6 @@ curl https://github.com/bazelbuild/bazel/releases/download/2.2.0/bazel-2.2.0-ins
 chmod +x bazel_installer.sh
 ./bazel_installer.sh --user
 
+export PATH="/opt/buildhome/bin:$PATH"
+
 yarn build
