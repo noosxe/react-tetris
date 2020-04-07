@@ -1,3 +1,44 @@
+load("@npm_bazel_rollup//:index.bzl", "rollup_bundle")
+load("@npm_bazel_terser//:index.bzl", "terser_minified")
+load("@npm//html-insert-assets:index.bzl", "html_insert_assets")
+load("@build_bazel_rules_nodejs//:index.bzl", "pkg_web")
+
+rollup_bundle(
+    name = "bundle",
+    entry_point = "//app:index.tsx",
+    deps = [
+        "//app",
+        "@npm//react",
+        "@npm//react-dom",
+    ],
+)
+
+terser_minified(
+    name = "bundle.min",
+    src = ":bundle",
+)
+
+_ASSETS = [
+    ":bundle.min",
+]
+
+html_insert_assets(
+    name = "inject_tags",
+    outs = ["index.html"],
+    args = [
+        "--out=$@",
+        "--html=$(execpath :index.tmpl.html)",
+        "--roots=$(RULEDIR)",
+        "--assets",
+    ] + ["$(execpaths %s)" % a for a in _ASSETS],
+    data = [":index.tmpl.html"] + _ASSETS,
+)
+
+pkg_web(
+    name = "package",
+    srcs = [":inject_tags"] + _ASSETS,
+)
+
 exports_files(
     ["tsconfig.json"],
     visibility = ["//:__subpackages__"],
