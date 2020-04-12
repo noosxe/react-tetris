@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "ibazel run app:devserver",
     "build": "bazel build :package",
+    "serve": "bazel run :prodserver",
     "lint": "eslint 'app/**/*.{js,ts,tsx}' --quiet --fix"
   },
   "devDependencies": {

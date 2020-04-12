@@ -7,3 +7,5 @@
 To start dev server please use `yarn dev`.
 
 To build production code please use `yarn build`.
+
+To start a local serve that will use production assets please use `yarn serve`.
