@@ -16,6 +16,7 @@ rollup_bundle(
         "@npm//@rollup/plugin-replace",
         "@npm//react",
         "@npm//react-dom",
+        "@npm//react-router-dom",
     ],
 )
 

@@ -9,8 +9,10 @@ ts_library(
         "index.tsx",
     ],
     deps = [
+        "//app/pages/welcome",
         "@npm//@types/react",
         "@npm//@types/react-dom",
+        "@npm//react-router-dom",
     ],
 )
 
@@ -24,5 +26,6 @@ ts_devserver(
         ":app",
         "@npm//react:react__umd",
         "@npm//react-dom:react-dom__umd",
+        "@npm//react-router-dom:react-router-dom__umd",
     ],
 )
