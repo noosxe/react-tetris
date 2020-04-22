@@ -32,7 +32,6 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "html-insert-assets": "^0.8.0",
-    "http-server": "^0.12.1",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.2",
     "prettier": "^2.0.3",
@@ -42,6 +41,7 @@
     "react-router-dom": "^5.1.2",
     "redux": "^4.0.5",
     "rollup": "1.32.1",
+    "serve": "^11.3.0",
     "terser": "^4.6.10",
     "typescript": "^3.8.3"
   },

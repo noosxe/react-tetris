@@ -2,7 +2,7 @@ load("@npm_bazel_rollup//:index.bzl", "rollup_bundle")
 load("@npm_bazel_terser//:index.bzl", "terser_minified")
 load("@npm//html-insert-assets:index.bzl", "html_insert_assets")
 load("@build_bazel_rules_nodejs//:index.bzl", "pkg_web")
-load("@npm//http-server:index.bzl", "http_server")
+load("@npm//serve:index.bzl", "serve")
 
 rollup_bundle(
     name = "bundle",
@@ -46,7 +46,7 @@ pkg_web(
     srcs = [":inject_tags"] + _ASSETS,
 )
 
-http_server(
+serve(
     name = "prodserver",
     data = [":package"],
     templated_args = ["package"],
