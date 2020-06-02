@@ -16,9 +16,18 @@ export default {
         // left-hand side can be an absolute path, a path
         // relative to the current directory, or the name
         // of a module in node_modules
-        'react': ['createElement', 'Component'],
-        'react-dom': ['render'],
-        'react-is': ['isValidElementType'],
+        'react': [
+          'createElement',
+          'Component',
+          'useMemo',
+          'useEffect',
+          'useLayoutEffect',
+          'useContext',
+          'useReducer',
+          'useRef',
+        ],
+        'react-dom': ['render', 'unstable_batchedUpdates'],
+        'react-is': ['isValidElementType', 'isContextConsumer'],
       },
     }),
   ],
