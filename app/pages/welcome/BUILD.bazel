@@ -9,6 +9,6 @@ ts_library(
         "welcome.tsx",
     ],
     deps = [
-        "@npm//@types/react",
+        "@npm//@types",
     ],
 )

@@ -7,12 +7,14 @@ ts_library(
     srcs = [
         "app.tsx",
         "index.tsx",
+        "store.ts",
     ],
     deps = [
         "//app/pages/welcome",
-        "@npm//@types/react",
-        "@npm//@types/react-dom",
-        "@npm//react-router-dom",
+        "@npm//@types",
+        "@npm//redux",
+        "@npm//redux-devtools-extension",
+        "@npm//redux-saga",
     ],
 )
 
@@ -26,6 +28,8 @@ ts_devserver(
         ":app",
         "@npm//react:react__umd",
         "@npm//react-dom:react-dom__umd",
+        "@npm//react-redux:react-redux__umd",
         "@npm//react-router-dom:react-router-dom__umd",
+        "@npm//redux:redux__umd",
     ],
 )

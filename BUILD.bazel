@@ -17,6 +17,9 @@ rollup_bundle(
         "@npm//react",
         "@npm//react-dom",
         "@npm//react-router-dom",
+        "@npm//redux",
+        "@npm//redux-devtools-extension",
+        "@npm//redux-saga",
     ],
 )
 
