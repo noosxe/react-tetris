@@ -11,7 +11,7 @@
     "@types/node": "^16.11.38",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.2",
-    "@types/react-redux": "^7.1.25",
+    "@types/react-redux": "^7.1.26",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^8.1.2",
