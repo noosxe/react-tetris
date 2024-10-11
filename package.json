@@ -18,6 +18,9 @@
     "react-scripts": "5.0.1",
     "typescript": "^5.6.3"
   },
+  "engines": {
+    "node": "^20"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
