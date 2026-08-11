@@ -15,13 +15,13 @@
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             nodejs_22
-            yarn
+            pnpm
           ];
 
           shellHook = ''
             echo "Welcome to the react-tetris development shell!"
             echo "Node.js: $(node --version)"
-            echo "Yarn: $(yarn --version)"
+            echo "pnpm: $(pnpm --version)"
           '';
         };
       });
